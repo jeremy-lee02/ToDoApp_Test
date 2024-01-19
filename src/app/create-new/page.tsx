@@ -35,10 +35,9 @@ const CreateNewToDO = (props: Props) => {
       router.push('/')
     }
   }
-  console.log(toDoList)
   return (
-    <div className='p-2 max-w-screen min-h-screen mt-10'>
-      <div className=' p-2 rounded-md border border-gray-400 max-w-[60%] m-auto'>
+    <div className='p-2 max-w-screen mt-10'>
+      <div className=' p-2 rounded-md border border-gray-400 md:max-w-[60%] max-w-[100%] m-auto'>
         <h1 className='text-center font-semibold text-xl'>Create New ToDo</h1>
         <form className='my-5 ml-2 space-y-6' onSubmit={handleSubmit}>
           <div>

@@ -15,9 +15,9 @@ const Header = (props: Props) => {
     }
     return (
         <>
-            <div className='flex justify-between items-center p-2'>
+            <div className='flex justify-between items-center md:py-5 md:px-10 p-4'>
                 <Link className='font-bold text-2xl hover:text-sky-500 hover:underline' href={'/'}>TODO APP</Link>
-                <Link className=' p-2 border border-sky-500 rounded-md hover:bg-sky-500 hover:text-white hover:scale-[1.1] transition ease-in-out' href={'/create-new'}>Add New</Link>
+                <Link className=' hover:text-sky-500 hover:scale-[1.1] transition ease-in-out' href={'/create-new'}>Add New</Link>
             </div>
         </>
   )

@@ -14,17 +14,17 @@ const FilterToDo = ({selectedFilter, allTaskNum,completedNum,notCompletedNum,onC
         <div 
         className={`cursor-pointer hover:text-blue-500 hover:underline ${selectedFilter === 'all-tasks' && "text-sky-500"}`} 
         onClick={() =>onClick("all-tasks")}>
-            <p>All Tasks <span className='text-sm'>{`(${allTaskNum})`}</span></p>
+            <p className='text-sm md:text-md'>All Tasks <span className='text-xs md:text-sm'>{`(${allTaskNum})`}</span></p>
         </div>
         <div 
         className={`cursor-pointer hover:text-blue-500 hover:underline ${selectedFilter === 'completed' && "text-sky-500"}`} 
         onClick={() =>onClick('completed')}>
-            <p>Completed <span className='text-sm'>{`(${completedNum})`}</span></p>
+            <p className='text-sm md:text-md'>Completed <span className='text-xs md:text-sm'>{`(${completedNum})`}</span></p>
         </div>
         <div 
         className={`cursor-pointer hover:text-blue-500 hover:underline ${selectedFilter === 'not-completed' && "text-sky-500"}`} 
         onClick={() =>onClick('not-completed')}>
-            <p>Not Completed <span className='text-sm'>{`(${notCompletedNum})`}</span></p>
+            <p className='text-sm md:text-md'>Not Completed <span className='text-xs md:text-sm'>{`(${notCompletedNum})`}</span></p>
         </div>
     </div>
   )

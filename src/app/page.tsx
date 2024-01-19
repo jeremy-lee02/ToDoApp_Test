@@ -3,9 +3,8 @@
 import FilterToDo from "@/components/FilterToDo";
 import { TODOLIST } from "@/libs/defaultData";
 import { TODO } from "@/libs/todo.type";
-import { Checkbox } from "@mui/material";
-import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import { useEffect, useState } from "react";
+import ToDoItem from "@/components/ToDoItem";
 
 
 export default function Home() {
@@ -79,23 +78,14 @@ export default function Home() {
         ) : (
           <>
             {filteredToDo.map((todo:TODO) => (
-              <>
-                <div className='flex justify-between items-center py-3' key={todo.id}>
-                  <div className="flex items-start">
-                    <div>
-                        <Checkbox checked = {todo.completed} onChange={(e) => handleChange(e,todo.id)} />
-                    </div>
-                    <div>
-                        <h1 className='font-semibold text-xl'>{todo.name}</h1>
-                        <p>{todo.desc}</p>
-                    </div>
-                  </div>
-                  <div className="mr-3 cursor-pointer" onClick={()=> handleDelete(todo.id)}>
-                    <DeleteOutlinedIcon color="warning" className="hover:scale-110 transition ease-in-out" />
-                  </div>
-                </div>
-                <div className='border border-gray-400 w-full'></div>
-              </>
+                <ToDoItem 
+                key={todo.id}
+                id= {todo.id} 
+                name= {todo.name} 
+                desc= {todo.desc} 
+                completed = {todo.completed} 
+                handleChange={handleChange} 
+                handleDelete={handleDelete}/>
             ))}
           </>
         )}
